@@ -1,9 +1,6 @@
 /*
  * Binary infix operators are operators that take two operands and are placed between them.
  */
-void main(List<String> args) {
-  learnBinaryInfixOperator();
-}
 
 void learnBinaryInfixOperator() {
   var a = 50;
@@ -41,4 +38,8 @@ void learnBitwise(int a, int b) {
   print(a ^ b); // Bitwise XOR: 38
   print(a << 1); // Left shift: 100
   print(a >> 1); // Right shift: 25
+}
+
+void main(List<String> args) {
+  learnBinaryInfixOperator();
 }
