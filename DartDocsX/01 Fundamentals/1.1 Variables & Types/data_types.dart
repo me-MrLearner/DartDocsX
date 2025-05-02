@@ -1,12 +1,7 @@
 /// DART VARIABLES AND DATA TYPES
 
-void main(List<String> args) {
-  //
-  learnDataTypes();
-}
-
 learnDataTypes() {
-  //[Data Types] String, int, double, bool, List, Map, Set, Runes, Symbol,
+  //[Data Types] String, int, double, bool, List, Map, Set, Runes, Symbol, Record,
   //[Advanced] Duration, DateTime, Uri, RegExp, Pattern, Type, Function, Null, dynamic, void
 
   String somName = 'foo';
@@ -33,9 +28,28 @@ learnDataTypes() {
   dynamic someNull = null;
   print(someNull);
 
+  var myReocrd = ('Shohaur', 22); // Unnamed record
+  var myReocrd2 = (name: 'Shohaur', age: 22); // Named record
+  print(
+    '$myReocrd'
+    ' $myReocrd2',
+  );
+
+  // Object is a general type — it can store a reference to any object (string, int, list, custom class, etc)
+  Object myObject = 'Hello';
+  myObject = 42; // can be reassigned any type
+  print(myObject);
+
   Symbol someSymbol = #someSymbol;
   print(someSymbol);
 
   Runes runes = Runes('ABC');
-  print(runes); // Runes('h', 'e', 'l', 'l', 'o')
+  print('Runes as code points: $runes');
+  String decodedString = String.fromCharCodes(runes);
+  print('Decoded string: $decodedString');
+}
+
+void main(List<String> args) {
+  //
+  learnDataTypes();
 }
